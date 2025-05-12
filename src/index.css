@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-table-thead .ant-table-cell{
+    background-color: #178d42 !important;
+    color: #FFF !important;
+}

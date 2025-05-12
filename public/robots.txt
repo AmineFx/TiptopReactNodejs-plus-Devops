@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /login
+Disallow: /admin
+Disallow: /admin/users
+Disallow: /admin/newsletters
+Disallow: /admin/tickets
+
+Sitemap: https://dsp5-archi-f23-15m-g6.com/sitemap.xml
