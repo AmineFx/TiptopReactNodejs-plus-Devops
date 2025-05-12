@@ -1,0 +1,19 @@
+version: '3'
+services:
+    backend_pre:
+        build:
+            context: .
+            dockerfile: Dockerfile.pre
+        labels:
+            - 'traefik.enable=true'
+            - 'traefik.http.routers.backend_pre.rule=Host(`preapi.dsp5-archi-f23-15m-g6.com`)'
+            - 'traefik.http.services.backend_pre.loadbalancer.server.port=9009'
+            - 'traefik.http.routers.backend_pre.tls=true'
+            - 'traefik.http.routers.backend_pre.tls.certresolver=le'
+        networks:
+            - workflow-network
+
+networks:
+    workflow-network:
+        driver: bridge
+        external: true
